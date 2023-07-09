@@ -1,0 +1,415 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+
+  background-image: url("pexels-moose-photos-1037992.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.main {
+  margin-top: 20%;
+  margin-bottom: auto;
+}
+
+
+.drum {
+  max-width: 25rem !important;
+  min-height: 125px;
+  margin: 15px;
+}
+
+
+.w:after {
+
+  background-image: url("tom1.png");
+}
+
+.a:after {
+
+
+  background-image: url("tom2.png");
+}
+
+.s:after {
+
+
+  background-image: url("crash.png");
+}
+
+.d:after {
+
+  background-image: url("tom4.png");
+}
+
+.j:after {
+
+  background-image: url("snare.png");
+}
+
+.k:after {
+
+  background-image: url("tom3.png");
+}
+
+.l:after {
+
+  background-image: url("kick.png");
+}
+
+
+
+/**************button style ************/
+button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  /* background: #111; */
+  cursor: grab;
+  position: relative;
+  z-index: 0;
+  align-items: center;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 12px;
+  max-height: 50px;
+  width: 220px;
+  border-radius: 10px;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+
+
+}
+
+button:before {
+  content: "";
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+button:hover:after {
+  transform: translate(0, 0);
+  border: 3px solid gray;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+
+button:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
+}
+
+
+
+
+/***************** buttons background css *******************/
+
+.main {
+  display: flex;
+  padding: 11px 33px;
+  width: 90rem;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  color: white;
+  background: #9571e3;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main:focus {
+  outline: none;
+}
+
+.main:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #FBC638;
+}
+
+.main .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.main:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.main:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.main:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.main:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #FBC638;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+
+
+/************* TITLE CSS ***************/
+
+
+.title {
+  /* font-family: 'Ultra', serif; */
+  color: #9571e3;
+  font-size: 100px;
+  display: flex;
+  position: absolute;
+  top: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+    .letter {
+      transition: ease-out 1s;
+      transform: translateY(40%);
+    }
+
+    .shadow {
+      font-family: 'Ultra', serif;
+      text-align: center;
+      font-size: 70px;
+      margin-top: 12px;
+      font-weight: lighter;
+      transform: scale(1, -1);
+
+      color: #999;
+      transition: ease-in 5s, ease-out 5s;
+    }
+
+    &:hover {
+      .letter {
+        transform: translateY(-200%);
+      }
+
+      .shadow {
+        opacity: 0;
+        transform: translateY(200%);
+      }
+    }
+  }
+}
+
+
+.letter {
+  font-family: 'Rocher';
+}
+
+/******************** h1 style *******************/
+
+p {
+  text-shadow: 3px 0 #bbdde9;
+  font-size: 4rem;
+  color: #DA0463;
+  font-family: 'Arvo', cursive;
+  font-weight: 900;
+}
+
+
+
+
+/* footer font design */
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+h2 {
+  font-family: 'Rocher';
+  text-align: center;
+  font-size: 50px;
+  margin-top: 10rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-palette-values --Purples {
+  font-family: Rocher;
+  base-palette: 6;
+}
+
+.purples {
+  font-palette: --Purples;
+}
+@font-palette-values --Mint {
+  font-family: Rocher;
+  base-palette: 2;
+}
+.mint {
+  font-palette: --Mint;
+}
+
+/* stopwatch design */
+.container{
+position: absolute;
+  text-align: right;
+ right: 10px !important;
+ top: 5px;
+
+}
+.timer{
+  position: relative;
+  text-align: center;
+  border: 1px solid black;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  background-color: #bbdde9;
+  font-family: 'Rocher';
+  font-size: 22px;
+  
+}
+
+
+#startBtn , #pauseBtn , #resetBtn {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .60rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#startBtn , #pauseBtn , #resetBtn:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+#startBtn , #pauseBtn , #resetBtn:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
